@@ -17,18 +17,5 @@ namespace CurrencyApp
 
         [JsonProperty(PropertyName = "Tür")]
         public string Type { get; set; }
-
-    }
-    public class EUR : Currency
-    {
-    }
-    public class USD : Currency
-    {
-    }
-    public class GBP : Currency
-    {
-    }
-    public class Gold : Currency
-    {
     }
 }

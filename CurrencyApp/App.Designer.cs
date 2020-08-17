@@ -74,9 +74,9 @@
             this.CurrencyLabel4.ForeColor = System.Drawing.SystemColors.Control;
             this.CurrencyLabel4.Location = new System.Drawing.Point(12, 69);
             this.CurrencyLabel4.Name = "CurrencyLabel4";
-            this.CurrencyLabel4.Size = new System.Drawing.Size(41, 13);
+            this.CurrencyLabel4.Size = new System.Drawing.Size(33, 13);
             this.CurrencyLabel4.TabIndex = 1;
-            this.CurrencyLabel4.Text = "GOLD";
+            this.CurrencyLabel4.Text = "Gold";
             // 
             // USDBuyingPriceLabel
             // 
@@ -217,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(250, 95);
+            this.ClientSize = new System.Drawing.Size(250, 109);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.GoldSellingPriceLabel);
