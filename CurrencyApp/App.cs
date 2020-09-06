@@ -28,6 +28,7 @@ namespace CurrencyApp
         {
             this.TopMost = !this.TopMost;
             pinToTopButton.Text = this.TopMost ? "Unpin" : "Pin";
+            alwaysOnTopToolStripMenuItem.Checked = this.TopMost;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -87,5 +88,6 @@ namespace CurrencyApp
             startWithWindowsToolStripMenuItem.Checked = newState;
             Startup.SetStartup(newState);
         }
+
     }
 }

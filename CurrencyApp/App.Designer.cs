@@ -52,6 +52,7 @@
             this.notifyIconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.startWithWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIconContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -258,25 +259,33 @@
             // notifyIconContextMenu
             // 
             this.notifyIconContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alwaysOnTopToolStripMenuItem,
             this.startWithWindowsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.notifyIconContextMenu.Name = "notifyIconContextMenu";
-            this.notifyIconContextMenu.Size = new System.Drawing.Size(177, 48);
+            this.notifyIconContextMenu.Size = new System.Drawing.Size(181, 92);
             // 
             // startWithWindowsToolStripMenuItem
             // 
             this.startWithWindowsToolStripMenuItem.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.startWithWindowsToolStripMenuItem.Name = "startWithWindowsToolStripMenuItem";
-            this.startWithWindowsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.startWithWindowsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.startWithWindowsToolStripMenuItem.Text = "Start with Windows";
             this.startWithWindowsToolStripMenuItem.Click += new System.EventHandler(this.startWithWindowsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // alwaysOnTopToolStripMenuItem
+            // 
+            this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alwaysOnTopToolStripMenuItem.Text = "Always on top";
+            this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.pinToTopButton_Click);
             // 
             // App
             // 
@@ -336,6 +345,7 @@
         private System.Windows.Forms.ContextMenuStrip notifyIconContextMenu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startWithWindowsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
     }
 }
 
