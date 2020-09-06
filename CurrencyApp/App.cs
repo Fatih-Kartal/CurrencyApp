@@ -75,6 +75,10 @@ namespace CurrencyApp
         private void moveButon_Click(object sender, EventArgs e)
         {
             this.FormBorderStyle = this.FormBorderStyle == FormBorderStyle.None ? FormBorderStyle.FixedSingle : FormBorderStyle.None;
+            if (FormBorderStyle == FormBorderStyle.None)
+            {
+                this.Location = new Point(Location.X + 8, Location.Y + 30);
+            }
         }
 
         private void startWithWindowsToolStripMenuItem_Click(object sender, EventArgs e)

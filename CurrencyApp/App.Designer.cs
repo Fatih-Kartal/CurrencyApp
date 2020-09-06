@@ -234,6 +234,7 @@
             this.moveButon.TabIndex = 14;
             this.moveButon.Text = "Move";
             this.moveButon.UseVisualStyleBackColor = true;
+            this.moveButon.Visible = false;
             this.moveButon.Click += new System.EventHandler(this.moveButon_Click);
             // 
             // button1
