@@ -3,6 +3,5 @@
 ################################################################################
 
 /CurrencyApp/.vs/CurrencyApp/v16
-/CurrencyApp/bin/Debug
 /CurrencyApp/obj/Debug
 /CurrencyApp/packages/Newtonsoft.Json.12.0.3
