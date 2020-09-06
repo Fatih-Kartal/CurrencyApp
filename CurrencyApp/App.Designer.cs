@@ -45,7 +45,9 @@
             this.GBPSellingPriceLabel = new System.Windows.Forms.Label();
             this.GoldSellingPriceLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.moveButon = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // pinToTopButton
@@ -213,10 +215,31 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // timer1
+            // timer
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // moveButon
+            // 
+            this.moveButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moveButon.Location = new System.Drawing.Point(163, 38);
+            this.moveButon.Name = "moveButon";
+            this.moveButon.Size = new System.Drawing.Size(34, 14);
+            this.moveButon.TabIndex = 14;
+            this.moveButon.Text = "MOVE";
+            this.moveButon.UseVisualStyleBackColor = true;
+            this.moveButon.Click += new System.EventHandler(this.moveButon_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(203, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 14);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Options";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // App
             // 
@@ -225,6 +248,8 @@
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(250, 94);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.moveButon);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.GoldSellingPriceLabel);
             this.Controls.Add(this.GBPSellingPriceLabel);
@@ -265,7 +290,9 @@
         private System.Windows.Forms.Label GBPSellingPriceLabel;
         private System.Windows.Forms.Label GoldSellingPriceLabel;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button moveButon;
+        private System.Windows.Forms.Button button1;
     }
 }
 

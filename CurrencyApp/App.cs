@@ -19,7 +19,7 @@ namespace CurrencyApp
             Rectangle wa = Screen.GetWorkingArea(this);
             this.Location = new Point(wa.Right - Size.Width, wa.Bottom - Size.Height);
             LoadCurrencies();
-            timer1.Start();
+            timer.Start();
         }
         private void pinToTopButton_Click(object sender, EventArgs e)
         {
@@ -54,9 +54,14 @@ namespace CurrencyApp
             GoldSellingPriceLabel.Text = (currencies[5].SellingPrice + "000").Substring(0, 6);
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             LoadCurrencies();
+        }
+
+        private void moveButon_Click(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = this.FormBorderStyle == FormBorderStyle.None ? FormBorderStyle.FixedSingle : FormBorderStyle.None;
         }
     }
 }
