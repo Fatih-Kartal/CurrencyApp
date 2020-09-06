@@ -63,5 +63,6 @@ namespace CurrencyApp
         {
             this.FormBorderStyle = this.FormBorderStyle == FormBorderStyle.None ? FormBorderStyle.FixedSingle : FormBorderStyle.None;
         }
+
     }
 }
