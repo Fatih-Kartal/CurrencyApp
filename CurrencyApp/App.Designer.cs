@@ -50,6 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.startWithWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIconContextMenu.SuspendLayout();
             this.SuspendLayout();
@@ -226,12 +227,12 @@
             // 
             // moveButon
             // 
-            this.moveButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moveButon.Location = new System.Drawing.Point(163, 38);
+            this.moveButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.moveButon.Location = new System.Drawing.Point(163, 35);
             this.moveButon.Name = "moveButon";
-            this.moveButon.Size = new System.Drawing.Size(34, 14);
+            this.moveButon.Size = new System.Drawing.Size(74, 20);
             this.moveButon.TabIndex = 14;
-            this.moveButon.Text = "MOVE";
+            this.moveButon.Text = "Move";
             this.moveButon.UseVisualStyleBackColor = true;
             this.moveButon.Click += new System.EventHandler(this.moveButon_Click);
             // 
@@ -244,6 +245,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "Options";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             // 
             // notifyIcon
             // 
@@ -255,14 +257,23 @@
             // notifyIconContextMenu
             // 
             this.notifyIconContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startWithWindowsToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.notifyIconContextMenu.Name = "notifyIconContextMenu";
-            this.notifyIconContextMenu.Size = new System.Drawing.Size(94, 26);
+            this.notifyIconContextMenu.Size = new System.Drawing.Size(177, 48);
+            // 
+            // startWithWindowsToolStripMenuItem
+            // 
+            this.startWithWindowsToolStripMenuItem.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.startWithWindowsToolStripMenuItem.Name = "startWithWindowsToolStripMenuItem";
+            this.startWithWindowsToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.startWithWindowsToolStripMenuItem.Text = "Start with Windows";
+            this.startWithWindowsToolStripMenuItem.Click += new System.EventHandler(this.startWithWindowsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitButton_Click);
             // 
@@ -323,6 +334,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip notifyIconContextMenu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem startWithWindowsToolStripMenuItem;
     }
 }
 
