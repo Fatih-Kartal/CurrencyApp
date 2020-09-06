@@ -9,6 +9,7 @@ namespace CurrencyApp
 {
     public class Currencies
     {
+
         [JsonProperty(PropertyName = "ABD DOLARI")]
         public Currency USD { get; set; }
 
@@ -20,5 +21,11 @@ namespace CurrencyApp
 
         [JsonProperty(PropertyName = "Gram Altın")]
         public Currency Gold { get; set; }
+    }
+
+    public class Data
+    {
+        [JsonProperty(PropertyName = "data")]
+        public List<Currency> Currencies { get; set; }
     }
 }

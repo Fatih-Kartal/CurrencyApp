@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net;
@@ -18,6 +19,7 @@ namespace CurrencyApp
             Rectangle wa = Screen.GetWorkingArea(this);
             this.Location = new Point(wa.Right - Size.Width, wa.Bottom - Size.Height);
             LoadCurrencies();
+            timer1.Start();
         }
         private void pinToTopButton_Click(object sender, EventArgs e)
         {
@@ -29,27 +31,32 @@ namespace CurrencyApp
             Application.Exit();
         }
 
-        public Currencies GetCurrencies()
+        public List<Currency> GetCurrencies()
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"https://finans.truncgil.com/today.json");
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://api.bigpara.hurriyet.com.tr/doviz/headerlist/anasayfa");
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
-            return JsonConvert.DeserializeObject<Currencies>(content);
+            return JsonConvert.DeserializeObject<Data>(content).Currencies;
         }
         public void LoadCurrencies()
         {
-            Currencies currencies = GetCurrencies();
-            USDBuyingPriceLabel.Text = currencies.USD.BuyingPrice.Substring(0, 6);
-            USDSellingPriceLabel.Text = currencies.USD.SellingPrice.Substring(0, 6);
+            List<Currency> currencies = GetCurrencies();
+            USDBuyingPriceLabel.Text = (currencies[6].BuyingPrice + "000").Substring(0, 6);
+            USDSellingPriceLabel.Text = (currencies[6].SellingPrice + "000").Substring(0, 6);
 
-            EURBuyingPriceLabel.Text = currencies.EUR.BuyingPrice.Substring(0, 6);
-            EURSellingPriceLabel.Text = currencies.EUR.SellingPrice.Substring(0, 6);
+            EURBuyingPriceLabel.Text = (currencies[3].BuyingPrice + "000").Substring(0, 6);
+            EURSellingPriceLabel.Text = (currencies[3].SellingPrice + "000").Substring(0, 6);
 
-            GBPBuyingPriceLabel.Text = currencies.GBP.BuyingPrice.Substring(0, 6);
-            GBPSellingPriceLabel.Text = currencies.GBP.SellingPrice.Substring(0, 6);
+            GBPBuyingPriceLabel.Text = (currencies[7].BuyingPrice + "000").Substring(0, 6);
+            GBPSellingPriceLabel.Text = (currencies[7].SellingPrice + "000").Substring(0, 6);
 
-            GoldBuyingPriceLabel.Text = currencies.Gold.BuyingPrice.Substring(0, 6);
-            GoldSellingPriceLabel.Text = currencies.Gold.SellingPrice.Substring(0, 6);
+            GoldBuyingPriceLabel.Text = (currencies[5].BuyingPrice + "000").Substring(0, 6);
+            GoldSellingPriceLabel.Text = (currencies[5].SellingPrice + "000").Substring(0, 6);
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            LoadCurrencies();
         }
     }
 }

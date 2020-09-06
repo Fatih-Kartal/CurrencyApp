@@ -45,6 +45,7 @@
             this.GBPSellingPriceLabel = new System.Windows.Forms.Label();
             this.GoldSellingPriceLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // pinToTopButton
@@ -212,12 +213,17 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
             // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(250, 109);
+            this.ClientSize = new System.Drawing.Size(250, 94);
             this.ControlBox = false;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.GoldSellingPriceLabel);
@@ -259,6 +265,7 @@
         private System.Windows.Forms.Label GBPSellingPriceLabel;
         private System.Windows.Forms.Label GoldSellingPriceLabel;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
