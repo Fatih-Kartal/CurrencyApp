@@ -89,5 +89,16 @@ namespace CurrencyApp
             Startup.SetStartup(newState);
         }
 
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Update update = new Update();
+            update.Show();
+        }
+
+        private void notifyIcon_Click(object sender, MouseEventArgs e)
+        {
+            this.TopMost = true;
+            this.TopMost = false;
+        }
     }
 }
