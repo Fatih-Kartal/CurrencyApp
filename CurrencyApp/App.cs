@@ -39,6 +39,7 @@ namespace CurrencyApp
         public List<Currency> GetCurrencies()
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(@"http://api.bigpara.hurriyet.com.tr/doviz/headerlist/anasayfa");
+            request.Timeout = 10000;
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
             return JsonConvert.DeserializeObject<Data>(content).Currencies;
